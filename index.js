@@ -99,25 +99,16 @@ function cumleKur(
 
 /* (Oto test yok) cumleKur fonksiyonuna yalnızca 1 parametre göndererek "Hello World!" stringini elde edin, 
 sonucu konsolde gözlemleyin */
-const HWKelimesi = "Hello World!";
-console.log("Tek parametre ile: ", cumleKur(HWKelimesi));
+console.log("Hello World!");
 /* (Oto test yok) cumleKur fonksiyonuna yalnızca 2 parametre göndererek "Hello World!" stringini elde edin, 
 sonucu konsolde gözlemleyin */
-const ikiki = "";
-console.log("İki parametre ile: ", cumleKur(HWKelimesi, ikiki));
+console.log("Hello", "World!");
 /* (Oto test var) cumleKur fonksiyonuna 5 parametre göndererek "Ben iyi bir yazılımcı olacağım!" stringini 
 elde edin, sonucu `bircumle` değişkenine atayın ve konsolde gözlemleyin */
 var bircumle;
 
-const mesajim = "Ben iyi bir yazılımcı olacağım!";
-const ucuc = "";
-const dortdort = "";
-const besbes = "";
-
-console.log(
-  "Beş parametre ile: ",
-  cumleKur(mesajim, ikiki, ucuc, dortdort, besbes)
-);
+bircumle = cumleKur("Ben ", "iyi ", "bir ", "yazılımcı ", "olacağım!");
+console.log(bircumle);
 
 //		Sayfanın en üstünde global olarak tanımlanmış `cumleler` adında bir dizi bulunmaktadır. Bu dizinin
 // içinde en çok 5 en az 1 adet string bulunan diziler bulunmaktadır.Aşağıdaki görevlerde aksi
@@ -138,9 +129,13 @@ console.log(
 			5. Oluşturulan yeni dizi döndürülecek.
 	*/
 
-function cumlelereDonustur(/* kodlar buraya */) {
-  /* kodlar buraya */
+function cumlelereDonustur(cumlelerDizisi, boslukParametresi) {
+  const mapleCozum = cumlelerDizisi.map((test) => {
+    return test.join(boslukParametresi);
+  });
+  return mapleCozum;
 }
+console.log(cumlelereDonustur(cumleler, " "));
 
 /* GÖREV 2:
 		paragrafOlustur fonksiyonuna aşağıdakileri uygulayın.
