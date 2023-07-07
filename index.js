@@ -150,9 +150,17 @@ console.log(cumlelereDonustur(cumleler, " "));
 			6. Oluşturulan paragraf döndürülecek
 	*/
 
-function paragrafOlustur(/* kodlar buraya */) {
-  /* kodlar buraya */
+function paragrafOlustur(cumlelerDizisi2, cbcumleKur, cbcumlelereDonustur) {
+  const gorev2Dizi = cbcumlelereDonustur(cumlelerDizisi2, " ");
+  const b = gorev2Dizi.filter((element, index) => {
+    if (index <= 9 && index % 2 == 1) {
+      return cbcumleKur(element);
+    }
+  });
+  let a = b.join("");
+  return cumleKur(a);
 }
+console.log(paragrafOlustur(cumleler, cumleKur, cumlelereDonustur));
 
 /* 	GÖREV 3:
 		Yukarıda isimleri sebzeler ve meyveler olan 2 dizi bulunmaktadır. Bu dizileri kullanarak aşağıdaki görevleri tamamlayın.
